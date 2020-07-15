@@ -6,7 +6,7 @@ pip install -r requirements.txt
 ```
 Specifically, the experiments were run with Python `3.8.3` and PyTorch `1.5.3` using NVIDIA Quadro RTX 6000s (CUDA version `10.2`).
 
-### Quick start
+## Quick start
 **Unsupervised document hashing** on Reuters using 16 bits
 ```bash
 python ammi.py reuters16_ammi data/document_hashing/reuters.tfidf.mat --train --raw_prior
@@ -17,14 +17,14 @@ python ammi.py toy data/related_articles/article_pairs_tfidf_small.p --train --r
 ```
 The VAE and DVQ baselines can be run similarly by switching `ammi.py` with `vae.py` or `dvq.py`.
 
-### Reproducibility
+## Reproducibility
 See [`commands.txt`](commands.txt) for the hyperparameters used in the paper. They were optimized by random grid search on validation data, for instance 
 ```bash
 python ammi.py tmc64_ammi data/document_hashing/reuters.tfidf.mat --train --num_features 64 --num_runs 100 --cuda 
 python ammi.py wdw128_ammi data/related_articles/article_pairs_tfidf.p --train --num_features 128 --num_runs 100 --cuda --num_workers 8
 ```
 
-### References
+## References
 [1] [Learning Discrete Structured Representations by Adversarially Maximizing Mutual Information (Stratos and Wiseman, 2020)](https://arxiv.org/abs/2004.03991)
 ```
 @article{stratos2020learning,
